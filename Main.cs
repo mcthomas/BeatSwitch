@@ -26,7 +26,8 @@ public class Main : MonoBehaviour {
     Texture2D yLine;
     public double beat;
     public bool play;
-    public int rand;
+    public System.Random rand;
+    public AudioSource[] sounds;
     public AudioSource theme;
     public AudioSource C;
     public AudioSource D;
@@ -36,7 +37,6 @@ public class Main : MonoBehaviour {
     public AudioSource A;
     public AudioSource B;
     public AudioSource HC;
-    public AudioSource[] notes;
     public bool flash;
     public bool first;
     public GUIStyle guiStyle;
@@ -56,6 +56,7 @@ public class Main : MonoBehaviour {
     void Start()
     {
         
+        rand = new System.Random();
         width = Screen.width;
         height = Screen.height;
         increment = width/19;
@@ -85,27 +86,20 @@ public class Main : MonoBehaviour {
         bar = 0;
         guiStyle = new GUIStyle();
         guiStyle.fontSize = 20;
-        C = GetComponent<AudioSource>();
-        D = GetComponent<AudioSource>();
-        E = GetComponent<AudioSource>();
-        F = GetComponent<AudioSource>();
-        G = GetComponent<AudioSource>();
-        A = GetComponent<AudioSource>();
-        B = GetComponent<AudioSource>();
-        HC = GetComponent<AudioSource>();
-        notes = new AudioSource[8];
-        notes[0] = C;
-        notes[1] = D;
-        notes[2] = E;
-        notes[3] = F;
-        notes[4] = G;
-        notes[5] = A;
-        notes[6] = B;
-        notes[7] = HC;
-        scores[0] = 0;
-        scores[1] = 0;
-        scores[2] = 0;
-        scores[3] = 0;
+        sounds = GetComponents<AudioSource>();
+        theme = sounds[0];
+        C = sounds[1];
+        D = sounds[2];
+        E = sounds[3];
+        F = sounds[4];
+        G = sounds[5];
+        A = sounds[6];
+        B = sounds[7];
+        HC = sounds[8];
+        //scores[0] = 0;
+        //scores[1] = 0;
+        //scores[2] = 0;
+        //scores[3] = 0;
         color = 0;
         //void musicConfig();
         for(int i = 0; i < 17; i++) {
@@ -126,7 +120,6 @@ public class Main : MonoBehaviour {
         Vector2 pos = touch.position;
             if ((pos.x >= 0) && (pos.x <= 1000) && (pos.y >= 0) && (pos.y <= 3000)) { //CHANGED 2
                 play = true;
-                theme = GetComponent<AudioSource>();
                 theme.Play();
                 var vp = GetComponent<UnityEngine.Video.VideoPlayer>();
                 vp.Play();
@@ -178,22 +171,43 @@ public class Main : MonoBehaviour {
         if(color == 0) {
             rotate.SetPixel(1,1,Color.red);
             rotate.Apply();
+            if(bar >.45 && bar <.55) {
+                GUI.DrawTexture(new Rect((float)xSpacer, ySpacer-((float)(increment*.75)), (float)((increment*17)*bar), (float)15), rotate);
+            }
+            else {
             GUI.DrawTexture(new Rect((float)xSpacer, ySpacer-((float)(increment*.75)), (float)((increment*17)*bar), (float)5), rotate);
+            }
         }
         else if(color == 1) {
             rotate.SetPixel(1,1,Color.yellow);
             rotate.Apply();
+            if(bar >.45 && bar <.55) {
+                GUI.DrawTexture(new Rect((float)(xSpacer+(increment*17)+(.75*increment)), ySpacer, (float)15, (float)(increment*17)*bar), rotate);
+            }
+            else {
             GUI.DrawTexture(new Rect((float)(xSpacer+(increment*17)+(.75*increment)), ySpacer, (float)5, (float)(increment*17)*bar), rotate);
+            }
         }
         else if(color == 2) {
             rotate.SetPixel(1,1,Color.blue);
             rotate.Apply();
+            if(bar >.45 && bar <.55) {
+                GUI.DrawTexture(new Rect((float)xSpacer, ySpacer+(float)(increment*17.75), (float)(increment*17)*bar, (float)15), rotate);
+            }
+            else {
             GUI.DrawTexture(new Rect((float)xSpacer, ySpacer+(float)(increment*17.75), (float)(increment*17)*bar, (float)5), rotate);
+            }
         }
         else {
             rotate.SetPixel(1,1,Color.green);
             rotate.Apply();
+            if(bar >.45 && bar <.55) {
+                GUI.DrawTexture(new Rect((float)(xSpacer-(.75*increment)), ySpacer, (float)15, (float)(increment*17)*bar), rotate);
+
+            }
+            else {
             GUI.DrawTexture(new Rect((float)(xSpacer-(.75*increment)), ySpacer, (float)5, (float)(increment*17)*bar), rotate);
+            }
         }
         for(int i = 0; i < 17; i++) {
             for(int j = 0; j < 17; j++) {
@@ -330,8 +344,8 @@ public class Main : MonoBehaviour {
                 else { colors[x,y] = "green";}
                 turn = false;
                 first = false;
-                rand = (int)Random.Range(0, 8);
-                notes[rand].Play();
+                int r  = rand.Next(1, 8);
+                sounds[r].Play();
 
             }
             if(color == 0) {
@@ -339,29 +353,29 @@ public class Main : MonoBehaviour {
 if (y >= 1 && (colors[x, y-1] == "yellow" || colors[x, y-1] == "blue" || colors[x, y-1] == "green")) {
 colors[x,y] = "red";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if (y <= 15 && (colors[x, y+1] == "yellow" || colors[x, y+1] == "blue" || colors[x, y+1] == "green")) {
 colors[x,y] = "red";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if (x <= 15 && (colors[x + 1, y] == "yellow" || colors[x+1, y] == "blue" || colors[x+1, y] == "green")) {
 colors[x,y] = "red";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if(x >= 1 && (colors[x - 1, y] == "yellow" || colors[x-1, y] == "blue" || colors[x-1, y] == "green")) {
 colors[x,y] = "red";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
             }
@@ -369,29 +383,29 @@ colors[x,y] = "red";
 if (y >= 1 && (colors[x, y-1] == "red" || colors[x, y-1] == "blue" || colors[x, y-1] == "green")) {
 colors[x,y] = "yellow";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if (y <= 15 && (colors[x, y+1] == "red" || colors[x, y+1] == "blue" || colors[x, y+1] == "green")) {
 colors[x,y] = "yellow";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if (x <= 15 && (colors[x + 1, y] == "red" || colors[x+1, y] == "blue" || colors[x+1, y] == "green")) {
 colors[x,y] = "yellow";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if(x >= 1 && (colors[x - 1, y] == "red" || colors[x-1, y] == "blue" || colors[x-1, y] == "green")) {
 colors[x,y] = "yellow";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
             }
@@ -399,29 +413,29 @@ colors[x,y] = "yellow";
 if (y >= 1 && (colors[x, y-1] == "red" || colors[x, y-1] == "yellow" || colors[x, y-1] == "green")) {
 colors[x,y] = "blue";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if (y <= 15 && (colors[x, y+1] == "red" || colors[x, y+1] == "yellow" || colors[x, y+1] == "green")) {
 colors[x,y] = "blue";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if (x <= 15 && (colors[x + 1, y] == "red" || colors[x+1, y] == "yellow" || colors[x+1, y] == "green")) {
 colors[x,y] = "blue";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if(x >= 1 && (colors[x - 1, y] == "red" || colors[x-1, y] == "yellow" || colors[x-1, y] == "green")) {
 colors[x,y] = "blue";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
             }
@@ -429,29 +443,29 @@ colors[x,y] = "blue";
 if (y >= 1 && (colors[x, y-1] == "red" || colors[x, y-1] == "blue" || colors[x, y-1] == "yellow")) {
 colors[x,y] = "green";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if (y <= 15 && (colors[x, y+1] == "red" || colors[x, y+1] == "blue" || colors[x, y+1] == "yellow")) {
 colors[x,y] = "green";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if (x <= 15 && (colors[x + 1, y] == "red" || colors[x+1, y] == "blue" || colors[x+1, y] == "yellow")) {
 colors[x,y] = "green";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
 else if(x >= 1 && (colors[x - 1, y] == "red" || colors[x-1, y] == "blue" || colors[x-1, y] == "yellow")) {
 colors[x,y] = "green";
     turn = false;
-    rand = (int)Random.Range(0, 8);
-    notes[rand].Play();
+    int r  = rand.Next(1, 8);
+    sounds[r].Play();
 
 }
             }
