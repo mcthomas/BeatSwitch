@@ -1,3 +1,5 @@
+<img src="logo.png" width="600"/>
+
 # BeatSwitch 
 
 ## Design Document
