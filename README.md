@@ -78,36 +78,13 @@ each with a different tempo, that the players may choose from for a given game. 
 
 ### Interface
 
-#### Main Menu
-   
-- Has options for play, high scores, and settings
-
-#### Player Selection
-
-- Select offline or online
-- Matchmaking or custom multiplayer
-
-#### Gameplay View
-
-- Primary top-down perspective for gameplay flow
-
-#### Settings
-
-- Includes options to disable music and sound effects
-
-#### High Scores
-
-- Includes player’s top point totals upon winning games in the past
+<img src="interface.png" width="600"/>
 
 ### Rules/Scoring/Winning Conditions
 
 - Two-four players can play. This determination is made during setup on the player selection screen. Turns are made in a clockwise fashion, with each of the four players positioned on a different side of the digital square game board grid. Each player only has a few moments to illuminate a square before the next beat strikes and the next player’s turn begins. An invalid move is ignored; a move can still be made during each player’s time window. A colored progress bar indicator in front of each side of the digital game board illuminates to indicate who’s turn it is. With 70 turns each, a four-player game takes 280 / [BPM] minutes to complete. The winner is determined as being the player with the most accumulated points, designated by the squares he or she has occupied, after each player has had 70 turns.
 
-- A white indicator on your side illuminates, synced to the tempo
-
-- You have approximately one second to illuminate a square for a valid move
-
-- The indicator in front of the next player illuminates/your turn concludes
+<img src="rules.png" width="600"/>
 
 ### Media List
 
