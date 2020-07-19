@@ -4,7 +4,18 @@
 
 ## Design Document
 
-### Design History
+## Contents
+
+  - [Design Log](#Design-Log "Design Log")
+  - [Vision Statement](#Vision-Statement "Vision Statement")
+  - [Audience, Platform, and Marketing](#Audience,-Platform,-and-Marketing "Audience, Platform, and Marketing")
+  - [Gameplay](#Gameplay "Gameplay")
+  - [Interface](#Interface "Interface")
+  - [Rules/Scoring/Winning Conditions](#Rules/Scoring/Winning-Conditions "Rules/Scoring/Winning Conditions")
+  - [Media List](#Media-List "Media List")
+  - [Prototype Playtest Feedback](#Prototype-Playtest-Feedback "Prototype Playtest Feedback")
+
+### Design Log
 
 - Version 1.0
 - Version 2.0 - additional puzzle/aesthetic component, asset overhaul, platform change
@@ -18,7 +29,7 @@
 
 #### Game Logline
 
-- Beat Switch: A turn-based, digital, abstract 4-player territory-capture game bound by a tempo. 
+- BeatSwitch: A turn-based, digital, abstract 4-player territory-capture game bound by a tempo; created with the Unity engine and deployed for iOS/itch.io.
 
 #### Gameplay Synopsis
 
@@ -55,7 +66,7 @@ each with a different tempo, that the players may choose from for a given game. 
 
 - I will be refining and implementing this game myself, including all assets. There should not exist any legal or financial obligations regarding copyrights, trademarks, contracts, or licensing agreements.
 
-### Gampleay 
+### Gameplay 
 
 #### Overview/Description
 
@@ -105,8 +116,6 @@ each with a different tempo, that the players may choose from for a given game. 
 #### Music/Sound Effects
 
 - all music and sound effects will be created in combination with the TE PO-20 and Logic Pro X. This will include three melodic sequences for gameplay, a menu jingle, and simplistic sounds
-
-Beat Switch will be created with the Unity engine and delivered on itch.io
 
 ### Prototype Playtest Feedback
 
