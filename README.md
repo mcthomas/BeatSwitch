@@ -8,10 +8,10 @@
 
   - [Design Log](#Design-Log "Design Log")
   - [Vision Statement](#Vision-Statement "Vision Statement")
-  - [Audience, Platform, and Marketing](#Audience,-Platform,-and-Marketing "Audience, Platform, and Marketing")
+  - [Audience, Platform, and Marketing](#Audience-Platform-and-Marketing "Audience, Platform, and Marketing")
   - [Gameplay](#Gameplay "Gameplay")
   - [Interface](#Interface "Interface")
-  - [Rules/Scoring/Winning Conditions](#Rules/Scoring/Winning-Conditions "Rules/Scoring/Winning Conditions")
+  - [Rules/Scoring/Winning Conditions](#RulesScoringWinning-Conditions "Rules/Scoring/Winning Conditions")
   - [Media List](#Media-List "Media List")
   - [Prototype Playtest Feedback](#Prototype-Playtest-Feedback "Prototype Playtest Feedback")
 
