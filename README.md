@@ -87,15 +87,17 @@ each with a different tempo, that the players may choose from for a given game. 
 - Select offline or online
 - Matchmaking or custom multiplayer
 
-##### Gameplay View
+#### Gameplay View
 
 - Primary top-down perspective for gameplay flow
 
-##### Settings
+#### Settings
 
 - Includes options to disable music and sound effects
 
-##### High Scores
+#### High Scores
+
+- Includes player’s top point totals upon winning games in the past
 
 ### Rules/Scoring/Winning Conditions
 
@@ -103,7 +105,7 @@ each with a different tempo, that the players may choose from for a given game. 
 
 - A white indicator on your side illuminates, synced to the tempo
 
-- You have ≅ one second to illuminate a square for a valid move
+- You have approximately one second to illuminate a square for a valid move
 
 - The indicator in front of the next player illuminates/your turn concludes
 
