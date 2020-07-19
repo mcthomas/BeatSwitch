@@ -5,13 +5,23 @@
 ## Design Document
 
 ### Design History
-Version 1.0
+
+- Version 1.0
+- Version 2.0 - additional puzzle/aesthetic component, asset overhaul, platform change
+- Version 3.0 - music is altered for a slower tempo; bonus game is added
+- Version 4.0 - concrete details specified and revised; preparing for aesthetic overhaul
+- Version 5.0 - feedback w/ response at bottom; other additions include minor details, including turn count and board size, revised
+- Version 6.0 - redactions of buggy and in-progress features, to be implemented at a later date
+- Version 7.0 - minor redactions
 
 ### Vision Statement
 
 #### Game Logline
 
-- Beat Switch: A turn-based, digital, abstract 4-player territory-capture game bound by a tempo. Gameplay Synopsis
+- Beat Switch: A turn-based, digital, abstract 4-player territory-capture game bound by a tempo. 
+
+#### Gameplay Synopsis
+
 - The digital game board consists of a 17x17 square grid. There are three melodic sequences,
 each with a different tempo, that the players may choose from for a given game. With each passing beat, a given player must quickly activate a square to illuminate it with their color. Encapsulation of a diagonal or straight line by two matching colors illuminates the squares between with his or her color. Each player has 70 turns (or “beats”) to occupy as much of the board as possible, with each square having a fixed and labeled point value. The point totals ultimately determine the winner.
 
