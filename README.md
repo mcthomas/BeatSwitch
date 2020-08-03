@@ -14,6 +14,7 @@
   - [Rules/Scoring/Winning Conditions](#RulesScoringWinning-Conditions "Rules/Scoring/Winning Conditions")
   - [Media List](#Media-List "Media List")
   - [Prototype Playtest Feedback](#Prototype-Playtest-Feedback "Prototype Playtest Feedback")
+  - [Pre-alpha Footage](#Pre-alpha-Footage "Pre-alpha Footage")
 
 ### Design Log
 
