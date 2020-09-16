@@ -517,57 +517,6 @@ colors[x, b] = colors[x, y];
 }
 }
 }
-
-
-/*
-if(y+2 <= 16 && x+2 <= 16) {
-for(int i = y + 2; i < 17; i++) {
-if(colors[x+i, y+i] == colors[x, y]) {
-b = i;
-while(b > y){
-b--;
-colors[x+b, y+b] = colors[x, y];
-}
-}
-}
-}
-
-if(y-2 >= 0 && x-2 >= 0) {
-for(int i = y - 2; i > 0; i--) {
-if(colors[x-i, y-i] == colors[x, y]) {
-b = i;
-while(b < y){
-b++;
-colors[x-b, y-b] = colors[x, y];
-}
-}
-}
-}
-
-if(y-2 >= 0 && x+2 <= 16) {
-for(int i = y - 2; i > 0; i--) {
-if(colors[x+i, y-i] == colors[x, y]) {
-b = i;
-while(b < y){
-b++;
-colors[x+b, y-b] = colors[x, y];
-}
-}
-}
-}
-
-if(y+2 <= 16 && x-2 >= 0) {
-for(int i = x - 2; i > 0; i--) {
-if(colors[x-i, y+i] == colors[x, y]) {
-b = i;
-while(b > y){
-b++;
-colors[x-b, y+b] = colors[x, y];
-}
-}
-}
-}
-*/
         }
 
 scores[0] = 0;
@@ -592,13 +541,5 @@ scores[3]++;
 }
         
     }
-    
-    //void musicConfig() {
-        
-        
-        
-    //}
-    
-
     
 }
