@@ -14,6 +14,7 @@
   - [Rules/Scoring/Winning Conditions](#RulesScoringWinning-Conditions "Rules/Scoring/Winning Conditions")
   - [Media List](#Media-List "Media List")
   - [Prototype Playtest Feedback](#Prototype-Playtest-Feedback "Prototype Playtest Feedback")
+  - [Pre-alpha Footage](#Pre-alpha-Footage "Pre-alpha Footage")
 
 ### Design Log
 
@@ -99,3 +100,9 @@ each with a different tempo, that the players may choose from for a given game. 
 ### Prototype Playtest Feedback
 
 - After receiving playlets feedback last week, I determined that a number of implementation details needed to be revised. These included removing the limitation of a single touch input allotted per turn, as well as resizing the board to be a bit smaller. Other modifications included a visually stylized tutorial that can be tapped through from the main menu, to brief new players on the rules. Furthermore, the progress bar indicators need to have a midway indicator to designate the best timing for moves to made in order to earn maximum bonus points, as well as to aid players that cannot hear the music or whom would otherwise have trouble timing their moves.
+
+### Pre-alpha Footage
+
+Click the gif below to navigate to the YouTube video.
+
+[![Pre-alpha recording](Demo.gif)](https://www.youtube.com/watch?v=xFj0uhdMsoA&feature=youtu.be)
